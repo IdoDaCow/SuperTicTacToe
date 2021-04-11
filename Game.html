@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ido's Game</title>
+        <link rel="shortcut icon" href="Images/PeepoLove.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="Styles.css">
+    </head>
+    <body id="body">
+        <div id="navbg">
+                <a href="Main.html" id="imglink"><img src="Images/PeepoLove.png" width="80px" height="65px"> </a>
+            <ul id="nav">
+                <li class="navlinks">
+                    <a href="login.html">Login</a>
+                </li>
+                <li class="navlinks">
+                    <a href="Game.html">Game</a>
+                </li>
+            </ul>
+        </div>
+        <div id="gamebox">
+            <br>
+            <table id="gameinfotbl" align="center">
+                <tr>
+                    <td colspan="4">
+                        <h1 id="turntitle" style="color: red;" align="center">Turn: X</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <p>X Wins Count: </p><p id="xwinscount">0</p>
+                    </td>
+                    <td align="center">
+                        <p>O Wins Counter: </p><p id="owinscount">0</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button class="game_menubtns" onclick="newGame();">Start a New Game</button></td>
+                    <td><button class="game_menubtns" onclick="switchPlayer();">Switch Starting Player</button></td>
+                </tr>
+            </table>
+            <hr>
+            <table id="gametbl1" class="gametables">
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="1_btn1" onclick="PutPiece('1_btn1', 1);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="1_btn2" onclick="PutPiece('1_btn2', 1);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="1_btn3" onclick="PutPiece('1_btn3', 1);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="1_btn4" onclick="PutPiece('1_btn4', 1);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="1_btn5" onclick="PutPiece('1_btn5', 1);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="1_btn6" onclick="PutPiece('1_btn6', 1);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="1_btn7" onclick="PutPiece('1_btn7', 1);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="1_btn8" onclick="PutPiece('1_btn8', 1);"></button>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="1_btn9" onclick="PutPiece('1_btn9', 1);"></button>
+                    </td>
+                </tr>
+            </table>
+            <table id="gametbl2" class="gametables">
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="2_btn1" onclick="PutPiece('2_btn1', 2);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="2_btn2" onclick="PutPiece('2_btn2', 2);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="2_btn3" onclick="PutPiece('2_btn3', 2);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="2_btn4" onclick="PutPiece('2_btn4', 2);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="2_btn5" onclick="PutPiece('2_btn5', 2);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="2_btn6" onclick="PutPiece('2_btn6', 2);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="2_btn7" onclick="PutPiece('2_btn7', 2);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="2_btn8" onclick="PutPiece('2_btn8', 2);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="2_btn9" onclick="PutPiece('2_btn9', 2);"></button>
+                    </td>
+                </tr>
+            </table>
+            <table id="gametbl3" class="gametables">
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="3_btn1" onclick="PutPiece('3_btn1', 3);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="3_btn2" onclick="PutPiece('3_btn2', 3);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="3_btn3" onclick="PutPiece('3_btn3', 3);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="3_btn4" onclick="PutPiece('3_btn4', 3);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="3_btn5" onclick="PutPiece('3_btn5', 3);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="3_btn6" onclick="PutPiece('3_btn6', 3);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="3_btn7" onclick="PutPiece('3_btn7', 3);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="3_btn8" onclick="PutPiece('3_btn8', 3);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="3_btn9" onclick="PutPiece('3_btn9', 3);"></button>
+                    </td>
+                </tr>
+            </table><br>
+            <table id="gametbl4" class="gametables">
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="4_btn1" onclick="PutPiece('4_btn1', 4);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="4_btn2" onclick="PutPiece('4_btn2', 4);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="4_btn3" onclick="PutPiece('4_btn3', 4);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="4_btn4" onclick="PutPiece('4_btn4', 4);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="4_btn5" onclick="PutPiece('4_btn5', 4);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="4_btn6" onclick="PutPiece('4_btn6', 4);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="4_btn7" onclick="PutPiece('4_btn7', 4);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="4_btn8" onclick="PutPiece('4_btn8', 4);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="4_btn9" onclick="PutPiece('4_btn9', 4);"></button>
+                    </td>
+                </tr>
+            </table>
+            <table id="gametbl5" class="gametables">
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="5_btn1" onclick="PutPiece('5_btn1', 5);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="5_btn2" onclick="PutPiece('5_btn2', 5);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="5_btn3" onclick="PutPiece('5_btn3', 5);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="5_btn4" onclick="PutPiece('5_btn4', 5);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="5_btn5" onclick="PutPiece('5_btn5', 5);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="5_btn6" onclick="PutPiece('5_btn6', 5);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="5_btn7" onclick="PutPiece('5_btn7', 5);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="5_btn8" onclick="PutPiece('5_btn8', 5);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="5_btn9" onclick="PutPiece('5_btn9', 5);"></button>
+                    </td>
+                </tr>
+            </table>
+            <table id="gametbl6" class="gametables">
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="6_btn1" onclick="PutPiece('6_btn1', 6);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="6_btn2" onclick="PutPiece('6_btn2', 6);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="6_btn3" onclick="PutPiece('6_btn3', 6);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="6_btn4" onclick="PutPiece('6_btn4', 6);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="6_btn5" onclick="PutPiece('6_btn5', 6);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="6_btn6" onclick="PutPiece('6_btn6', 6);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="6_btn7" onclick="PutPiece('6_btn7', 6);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="6_btn8" onclick="PutPiece('6_btn8', 6);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="6_btn9" onclick="PutPiece('6_btn9', 6);"></button>
+                    </td>
+                </tr>
+            </table><br>
+            <table id="gametbl7" class="gametables">
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="7_btn1" onclick="PutPiece('7_btn1', 7);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="7_btn2" onclick="PutPiece('7_btn2', 7);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="7_btn3" onclick="PutPiece('7_btn3', 7);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="7_btn4" onclick="PutPiece('7_btn4', 7);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="7_btn5" onclick="PutPiece('7_btn5', 7);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="7_btn6" onclick="PutPiece('7_btn6', 7);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="7_btn7" onclick="PutPiece('7_btn7', 7);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="7_btn8" onclick="PutPiece('7_btn8', 7);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="7_btn9" onclick="PutPiece('7_btn9', 7);"></button>
+                    </td>
+                </tr>
+            </table>
+            <table id="gametbl8" class="gametables">
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="8_btn1" onclick="PutPiece('8_btn1', 8);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="8_btn2" onclick="PutPiece('8_btn2', 8);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="8_btn3" onclick="PutPiece('8_btn3', 8);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="8_btn4" onclick="PutPiece('8_btn4', 8);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="8_btn5" onclick="PutPiece('8_btn5', 8);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="8_btn6" onclick="PutPiece('8_btn6', 8);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="8_btn7" onclick="PutPiece('8_btn7', 8);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="8_btn8" onclick="PutPiece('8_btn8', 8);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="8_btn9" onclick="PutPiece('8_btn9', 8);"></button>
+                    </td>
+                </tr>
+            </table>
+            <table id="gametbl9" class="gametables">
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="9_btn1" onclick="PutPiece('9_btn1', 9);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="9_btn2" onclick="PutPiece('9_btn2', 9);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="9_btn3" onclick="PutPiece('9_btn3', 9);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="9_btn4" onclick="PutPiece('9_btn4', 9);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="9_btn5" onclick="PutPiece('9_btn5', 9);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="9_btn6" onclick="PutPiece('9_btn6', 9);"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="9_btn7" onclick="PutPiece('9_btn7', 9);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="9_btn8" onclick="PutPiece('9_btn8', 9);"></button>
+                    </td>
+                    <td class="gametables_td">
+                        <button class="gamebuttons" id="9_btn9" onclick="PutPiece('9_btn9', 9);"></button>
+                    </td>
+                </tr>
+            </table>
+        </div><br><br><br><br><br><hr>
+        <h1 align="center">Created & Coded By: Ido Abrahami</h1>
+        <div id="eventbox">
+            <h1>GAME EVENT!</h1>
+            <h2>You placed a piece that leads to a full game. Moving you to a random game in:</h2>
+            <p id="event_secondcounter" style="color: red; font-size: 100px; margin-top: -30px;">5</p>
+        </div>
+        <div id="gameresult_box">
+            <h1>GAME EVENT!</h1>
+            <h2>We have a winner! The winner is:</h2>
+            <h1 id="winner" style="margin-top: -50px; margin-bottom: 10px;"></h1>
+            <button class="game_menubtns" onclick="newGame();">Start a New Game</button>
+        </div>
+        <script src="Main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,190 @@
+/* All Pages: */
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+#body {
+    background-color:cornsilk;
+}
+#navbg {
+    position: fixed;
+    height: 75px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    z-index: 2;
+}
+#imglink {
+    position: fixed;
+}
+#nav {
+    list-style-type: none;
+    position: fixed;
+    left: 75px;
+}
+#nav li {
+    display: inline;
+    margin-right: 50px;
+}
+#nav li a {
+    color: white;
+    font-size: 35px;
+    text-decoration: none;
+}
+#nav li a:hover {
+    color: red;
+    transition: 0.3s;
+}
+
+/* HomePage: */
+#loginbox {
+    height: 250px;
+    background-color:burlywood;
+    width: 80%;
+    left: 10%;
+    border: solid 3px black;
+    top: 120px;
+    position: absolute;
+}
+#boxtbl {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -50px;
+}
+#loginredi {
+    width: 30%;
+    height: 50px;
+    background-color:rgb(160, 243, 243);
+    font-size: 30px;
+    border: solid 3px black;
+}
+#loginredi:hover {
+    background-color: red;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Login Page: */
+#loginformbox {
+    height: 700px;
+    width: 50%;
+    background-color:darkgray;
+    border: solid 2px black;
+    position: absolute;
+    top: 100px;
+    left: 25%;
+}
+#logintitle {
+    text-align: center;
+    font-size: 35px;
+    margin-top: -5px;
+}
+#loginform {
+    text-align: center;
+}
+.login_inputs{
+    border: solid 2px black;
+    height: 50px;
+    width: 150px;
+    text-align: right;
+    margin-top: -20px;
+}
+.login_inputs:hover {
+    border: solid 2px red;
+    transition: 0.3s
+}
+#submitbtn {
+    width: 250px;
+    height: 100px;
+    border: solid 2px black;
+    font-size: 40px;
+}
+#submitbtn:hover {
+    background-color: green;
+    color: white;
+    transition: 0.3s;
+}
+#resetbtn {
+    width: 250px;
+    height: 100px;
+    border: solid 2px black;
+    font-size: 40px;
+}
+#resetbtn:hover {
+    background-color: red;
+    color: white;
+    transition: 0.3s;
+}
+#gamebox {
+    position: relative;
+    height: 950px;
+    width: 80%;
+    background-color: dimgray;
+    top: 100px;
+    left: 10%;
+    border: solid 2px black;
+}
+.gametables {
+    display: inline;
+    position: relative;
+    left: 32%;
+}
+.gametables tr td {
+    border: solid 2px black;
+    height: 50px;
+    width: 50px;
+}
+.fa { 
+    transform: scale(3,3); 
+    /* Changes the size of the X/O emojis.
+    Learned at https://stackoverflow.com/questions/28564793/changing-width-of-font-awesome-icons */
+}
+.gamebuttons {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.gamebuttons:hover {
+    background-color:lime;
+    transition: 0.3s;
+}
+#gameinfotbl {
+    border: solid 2px black;
+    background-color:gainsboro;
+}
+#owinscount {
+    color: blue;
+    font-size: 30px;
+}
+#xwinscount {
+    color: red;
+    font-size: 30px;
+}
+.game_menubtns{
+    width: 250px;
+    height: 50px;
+    border: solid 2px black;
+    font-size: 18px;
+    background-color:palegoldenrod;
+}
+.game_menubtns:hover {
+    background-color: red;
+    color: white;
+    transition: 0.3s;
+}
+.gametables_td button{
+    border: solid 2px black;
+}
+#eventbox, #gameresult_box {
+    top: 200px;
+    left: 25%;
+    width: 50%;
+    height: 30%;
+    background-color:pink;
+    position: fixed;
+    z-index: 3;
+    text-align: center;
+    border: solid 5px black;
+    display: none;
+}

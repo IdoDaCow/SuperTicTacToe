@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ido's Game</title>
+        <link rel="shortcut icon" href="Images/PeepoLove.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="Styles.css">
+    </head>
+    <body id="body">
+        <div id="navbg">
+                <a href="Main.html" id="imglink"><img src="Images/PeepoLove.png" width="80px" height="65px"> </a>
+            <ul id="nav">
+                <li class="navlinks">
+                    <a href="login.html">Login</a>
+                </li>
+                <li class="navlinks">
+                    <a href="Game.html">Game</a>
+                </li>
+            </ul>
+        </div>
+        <div id="loginformbox">
+            <h1 id="logintitle"><u>התחברות</u></h1>
+            <form id="loginform" align="right">
+                <label for="login_name"><h2 dir="rtl">שם:</h2></label>
+                <input class="login_inputs" type="text" id="login_name" placeholder="שם"><br>
+                <label for="login_age"><h2 dir="rtl">גיל:</h2></label>
+                <input class="login_inputs" type="number" id="login_age" placeholder="גיל"><br>
+                <label for="login_email"><h2 dir="rtl">אימייל:</h2></label>
+                <input class="login_inputs" type="email" id="login_email" placeholder="אימייל"><br>
+                <label for="login_pass"><h2 dir="rtl">סיסמה:</h2></label>
+                <input class="login_inputs" type="password" id="login_pass" placeholder="סיסמה"><br><br><hr style="border: solid 3px black;"><br>
+                <input type="submit" id="submitbtn">
+                <input type="reset" id="resetbtn">
+            </form>
+        </div>
+        <script src="Main.js"></script>
+    </body>
+</html>
